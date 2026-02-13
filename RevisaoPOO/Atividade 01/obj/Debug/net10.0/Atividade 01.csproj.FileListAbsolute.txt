@@ -1,0 +1,15 @@
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\bin\Debug\net10.0\Atividade 01.exe
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\bin\Debug\net10.0\Atividade 01.deps.json
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\bin\Debug\net10.0\Atividade 01.runtimeconfig.json
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\bin\Debug\net10.0\Atividade 01.dll
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\bin\Debug\net10.0\Atividade 01.pdb
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\obj\Debug\net10.0\Atividade 01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\obj\Debug\net10.0\Atividade 01.AssemblyInfoInputs.cache
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\obj\Debug\net10.0\Atividade 01.AssemblyInfo.cs
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\obj\Debug\net10.0\Atividade 01.csproj.CoreCompileInputs.cache
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\obj\Debug\net10.0\Atividade 01.sourcelink.json
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\obj\Debug\net10.0\Atividade 01.dll
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\obj\Debug\net10.0\refint\Atividade 01.dll
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\obj\Debug\net10.0\Atividade 01.pdb
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\obj\Debug\net10.0\Atividade 01.genruntimeconfig.cache
+C:\Users\50408858818\Desktop\BackEndMoura\RevisaoPOO\Atividade 01\obj\Debug\net10.0\ref\Atividade 01.dll
