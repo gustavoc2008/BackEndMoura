@@ -18,9 +18,9 @@ public class InstituicaoController : ControllerBase
     }
 
     /// <summary>
-    /// 
+    ///  EndPoint da API que faz a chamada para o metodo de lista as instituições
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Status Code 200 e alista de instituições</returns>
     [HttpGet]
     public IActionResult Listar()
     {
@@ -35,10 +35,10 @@ public class InstituicaoController : ControllerBase
     }
 
     /// <summary>
-    /// 
+    /// EndPoint da API que faz a chamada para o metodo de buscar uma instituição especifica
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
+    /// <param name="id">Id da instituição buscada</param>
+    /// <returns>Status Code 200 e a instituição buscada</returns>
     [HttpGet("{id}")]
     public IActionResult BuscarPorId(Guid id)
     {
@@ -53,10 +53,10 @@ public class InstituicaoController : ControllerBase
     }
 
     /// <summary>
-    /// 
+    /// EndPoint da API que faz a chamada para o método de cadastrar uma instituição
     /// </summary>
-    /// <param name="instituicao"></param>
-    /// <returns></returns>
+    /// <param name="instituicao">Instituição</param>
+    /// <returns>Status Code 201 e a instituição a ser cadastrada</returns>
     [HttpPost]
     public IActionResult Cadastrar(InstituicaoDTO instituicao)
     {
@@ -79,11 +79,11 @@ public class InstituicaoController : ControllerBase
     }
 
     /// <summary>
-    /// 
+    /// EndPoint da API que faz a chamada para o metodo de atualizar uma instituição
     /// </summary>
-    /// <param name="id"></param>
-    /// <param name="instituicao"></param>
-    /// <returns></returns>
+    /// <param name="id">Id da instituição a ser atualizado</param>
+    /// <param name="instituicao">Instituição com os dados atualizados</param>
+    /// <returns>Status Code 204 e a instituição atualizada</returns>
     [HttpPut("{id}")]
     public IActionResult Atualizar(Guid id, Instituicao instituicao)
     {
@@ -106,10 +106,10 @@ public class InstituicaoController : ControllerBase
     }
 
     /// <summary>
-    /// 
+    /// EndPoint da API que faz a chamada para o metodo de deletar uma instituição
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
+    /// <param name="id">Id da instituição a ser excluido</param>
+    /// <returns>Status Code 204</returns>
     [HttpDelete("{id}")]
     public IActionResult Deletar(Guid id)
     {

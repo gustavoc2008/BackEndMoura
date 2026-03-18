@@ -18,9 +18,9 @@ public class TipoUsuarioController : ControllerBase
     }
 
     /// <summary>
-    /// 
+    /// EndPoint da API que faz a chamada para o metodo de lista os tipos de usuários
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Status Code 200 e alista de tipos de usuários </returns>
     [HttpGet]
     public IActionResult Listar()
     {
@@ -35,10 +35,10 @@ public class TipoUsuarioController : ControllerBase
     }
 
     /// <summary>
-    /// 
+    /// EndPoint da API que faz a chamada para o metodo de buscar um tipo de usuário especifico
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
+    /// <param name="id">Id do tipo de usuário buscado</param>
+    /// <returns>Status Code 200 e o tipo de usuário buscado</returns>
     [HttpGet("{id}")]
     public IActionResult BuscarPorId(Guid id)
     {
@@ -53,10 +53,10 @@ public class TipoUsuarioController : ControllerBase
     }
 
     /// <summary>
-    /// 
+    /// EndPoint da API que faz a chamada para o método de cadastrar um tipo de usuário
     /// </summary>
-    /// <param name="tipoUsuario"></param>
-    /// <returns></returns>
+    /// <param name="tipoUsuario">Tipo de Usuário</param>
+    /// <returns>Status Code 201 e o tipo de usuário a ser cadastrado</returns>
     [HttpPost]
     public IActionResult Cadastrar(TipoUsuarioDTO tipoUsuario)
     {
@@ -77,11 +77,11 @@ public class TipoUsuarioController : ControllerBase
     }
 
     /// <summary>
-    /// 
+    /// EndPoint da API que faz a chamada para o metodo de atualizar um tipo de usuário
     /// </summary>
-    /// <param name="id"></param>
-    /// <param name="tipoUsuario"></param>
-    /// <returns></returns>
+    /// <param name="id">Id do tipo usuário a ser atualizado</param>
+    /// <param name="tipoUsuario">Tipo de usuário com os dados atualizado</param>
+    /// <returns>Status Code 204 e o tipo de usuário atualizado</returns>
     [HttpPut("{id}")]
     public IActionResult Atualizar(Guid id, TipoUsuario tipoUsuario)
     {
@@ -102,10 +102,10 @@ public class TipoUsuarioController : ControllerBase
     }
 
     /// <summary>
-    /// 
+    /// EndPoint da API que faz a chamada para o metodo de deletar um tipo de usuário
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
+    /// <param name="id">Id do tipo do usuário a ser excluido</param>
+    /// <returns>Status Code 204</returns>
     [HttpDelete("{id}")]
     public IActionResult Deletar(Guid id)
     {

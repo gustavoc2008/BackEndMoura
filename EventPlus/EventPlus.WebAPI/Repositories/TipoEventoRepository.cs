@@ -45,7 +45,7 @@ public class TipoEventoRepository : ITipoEventoRepository
     /// <param name="tipoEvento">Tipo de evento a ser cadastrado</param>
     public void Cadastrar(TipoEvento tipoEvento)
     {
-       _context.TipoEventos.Add(tipoEvento);
+        _context.TipoEventos.Add(tipoEvento);
         _context.SaveChanges();
     }
 

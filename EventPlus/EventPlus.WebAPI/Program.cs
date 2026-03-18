@@ -2,6 +2,7 @@ using EventPlus.WebAPI.BdContectEvent;
 using EventPlus.WebAPI.Interface;
 using EventPlus.WebAPI.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,34 @@ builder.Services.AddDbContext<EventContext>(options => options.UseSqlServer
 builder.Services.AddScoped<ITipoEventoRepository, TipoEventoRepository>();
 builder.Services.AddScoped<ITipoUsuarioRepository, TipoUsuarioRepository>();
 builder.Services.AddScoped<IInstituicaoRepository, InstituicaoRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IEventoRepository,  EventoRepository>();
+builder.Services.AddScoped<IPresencaRepository, PresencaRepositry>();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultChallengeScheme = "JwtBearer";
+    options.DefaultAuthenticateScheme = "JwtBearer";
+})
+
+    .AddJwtBearer("JwtBearer", options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+
+            ValidateAudience = true,
+
+            ValidateLifetime = true,
+
+            IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("eventplus-chave-autenticacao-webapi-dev")),
+
+            ClockSkew = TimeSpan.FromMinutes(5),
+            ValidIssuer = "api-eventos",    
+            ValidAudience = "api-eventos",
+        };
+    });
+
 
 //Adiciona Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -74,7 +103,10 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

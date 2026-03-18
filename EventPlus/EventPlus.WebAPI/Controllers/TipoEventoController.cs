@@ -1,6 +1,7 @@
 ﻿using EventPlus.WebAPI.DTO;
 using EventPlus.WebAPI.Interface;
 using EventPlus.WebAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -57,6 +58,7 @@ public class TipoEventoController : ControllerBase
     /// </summary>
     /// <param name="tipoEvento"> Tipo de evento </param>
     /// <returns>Status Code 201 e o tipo de evento a ser cadastrado</returns>
+    [Authorize]
     [HttpPost]
     public IActionResult Cadastrar(TipoEventoDTO tipoEvento)
     {
