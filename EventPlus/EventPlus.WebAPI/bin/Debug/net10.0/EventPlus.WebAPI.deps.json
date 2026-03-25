@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "EventPlus.WebAPI/1.0.0": {
         "dependencies": {
+          "Azure.AI.ContentSafety": "1.0.0",
           "BCrypt.Net-Next": "4.1.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.5",
           "Microsoft.AspNetCore.OpenApi": "10.0.3",
@@ -15,10 +16,22 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "10.0.3",
           "Swashbuckle.AspNetCore": "10.1.5",
+          "Swashbuckle.AspNetCore.SwaggerGen": "10.1.6",
           "System.IdentityModel.Tokens.Jwt": "8.16.0"
         },
         "runtime": {
           "EventPlus.WebAPI.dll": {}
+        }
+      },
+      "Azure.AI.ContentSafety/1.0.0": {
+        "dependencies": {
+          "Azure.Core": "1.47.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.AI.ContentSafety.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.23.61102"
+          }
         }
       },
       "Azure.Core/1.47.1": {
@@ -679,30 +692,30 @@
       },
       "Swashbuckle.AspNetCore/10.1.5": {
         "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "10.1.5",
-          "Swashbuckle.AspNetCore.SwaggerGen": "10.1.5",
+          "Swashbuckle.AspNetCore.Swagger": "10.1.6",
+          "Swashbuckle.AspNetCore.SwaggerGen": "10.1.6",
           "Swashbuckle.AspNetCore.SwaggerUI": "10.1.5"
         }
       },
-      "Swashbuckle.AspNetCore.Swagger/10.1.5": {
+      "Swashbuckle.AspNetCore.Swagger/10.1.6": {
         "dependencies": {
           "Microsoft.OpenApi": "2.4.1"
         },
         "runtime": {
           "lib/net10.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "assemblyVersion": "10.1.5.0",
-            "fileVersion": "10.1.5.2342"
+            "assemblyVersion": "10.1.6.0",
+            "fileVersion": "10.1.6.2415"
           }
         }
       },
-      "Swashbuckle.AspNetCore.SwaggerGen/10.1.5": {
+      "Swashbuckle.AspNetCore.SwaggerGen/10.1.6": {
         "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "10.1.5"
+          "Swashbuckle.AspNetCore.Swagger": "10.1.6"
         },
         "runtime": {
           "lib/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "assemblyVersion": "10.1.5.0",
-            "fileVersion": "10.1.5.2342"
+            "assemblyVersion": "10.1.6.0",
+            "fileVersion": "10.1.6.2415"
           }
         }
       },
@@ -839,6 +852,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Azure.AI.ContentSafety/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-62UgYaWYXlieHXnvF6EZjPahgYcuRe0jhsDZu8pMGhvUwkEsgmL4d2ag3Wlk+nYdLbKCE3TIPJmAPI/U/BVYJQ==",
+      "path": "azure.ai.contentsafety/1.0.0",
+      "hashPath": "azure.ai.contentsafety.1.0.0.nupkg.sha512"
     },
     "Azure.Core/1.47.1": {
       "type": "package",
@@ -1099,19 +1119,19 @@
       "path": "swashbuckle.aspnetcore/10.1.5",
       "hashPath": "swashbuckle.aspnetcore.10.1.5.nupkg.sha512"
     },
-    "Swashbuckle.AspNetCore.Swagger/10.1.5": {
+    "Swashbuckle.AspNetCore.Swagger/10.1.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-s4Mct6+Ob0LK9vYVaZcYi/RFFCOEJNjf6nJ5ZPoxtpdFSlzR6i9AHI7Vl44obX8cynRxJW7prA1IUabkiXolFg==",
-      "path": "swashbuckle.aspnetcore.swagger/10.1.5",
-      "hashPath": "swashbuckle.aspnetcore.swagger.10.1.5.nupkg.sha512"
+      "sha512": "sha512-XkzyhvZilKQvfky9HJKCtOHAHB7S0qswIu8nkKa6c2w/y2o3nQR3hNP896iprsX9uGh6U2l9XvAk+7cUXvxALQ==",
+      "path": "swashbuckle.aspnetcore.swagger/10.1.6",
+      "hashPath": "swashbuckle.aspnetcore.swagger.10.1.6.nupkg.sha512"
     },
-    "Swashbuckle.AspNetCore.SwaggerGen/10.1.5": {
+    "Swashbuckle.AspNetCore.SwaggerGen/10.1.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ysQIRgqnx4Vb/9+r3xnEAiaxYmiBHO8jTg7ACaCh+R3Sn+ZKCWKD6nyu0ph3okP91wFSh/6LgccjeLUaQHV+ZA==",
-      "path": "swashbuckle.aspnetcore.swaggergen/10.1.5",
-      "hashPath": "swashbuckle.aspnetcore.swaggergen.10.1.5.nupkg.sha512"
+      "sha512": "sha512-x2miNZnMl5yK0rprSAWgl5a6KlJsbNxmry1YDzh0h7l7TW3GsZhF8szqmaP5/SlWI/vCK8pF4CqQefrFim80sw==",
+      "path": "swashbuckle.aspnetcore.swaggergen/10.1.6",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.10.1.6.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore.SwaggerUI/10.1.5": {
       "type": "package",
