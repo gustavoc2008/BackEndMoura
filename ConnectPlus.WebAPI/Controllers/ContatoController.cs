@@ -27,6 +27,7 @@ namespace ConnectPlus.Controllers
         /// <summary>
         /// Endpoint da api que faz a chamada para o metodo de listar 
         /// </summary>
+        /// <returns>Lista de Contatos</returns>
         [HttpGet]
         public IActionResult Listar()
         {
@@ -43,6 +44,8 @@ namespace ConnectPlus.Controllers
         /// <summary>
         /// Endpoint da api que faz a chamada para o metodo de buscar por id
         /// </summary>
+        /// <param name="Id">Id do contato para filtragem</param>
+        /// <returns>Busca por id de contatos</returns>
         [HttpGet("{id}")]   
         public IActionResult BuscarPorId(Guid Id)
         {
@@ -56,6 +59,11 @@ namespace ConnectPlus.Controllers
             }
         }
 
+        /// <summary>
+        /// EndPoint da API que faz a chamada para o metodo cadastrar um contato
+        /// </summary>
+        /// <param name="Contato">Contato a ser cadastrado</param>
+        /// <returns>Status Code 201 e o contato cadastrado</returns>
         [HttpPost]
         public IActionResult Cadastrar([FromForm] ContatoDTO Contato)
         {   
@@ -95,8 +103,11 @@ namespace ConnectPlus.Controllers
         }
 
         /// <summary>
-        /// Endpoint da api que faz a chamada de um metodo de atualizar um tipo de evento 
+        /// Endpoint da api que faz a chamada de um metodo de atualizar um contato
         /// </summary>
+        /// <param name="id">Id do contato a ser atualizado</param>
+        /// <param name="contato">Contato com os dados atualizados</param>
+        /// <returns>Status Code 204 e o contato a ser atualizado</returns>
         [HttpPut("{id}")]
         public IActionResult Atualizar(Guid id, [FromForm] ContatoDTO contato)
         {
@@ -145,8 +156,10 @@ namespace ConnectPlus.Controllers
         }
 
         /// <summary>
-        /// Endpoint da api que faz a chamada para o metodo de deletar um tipo de evento
+        /// Endpoint da api que faz a chamada para o metodo de deletar um contato
         /// </summary>
+        /// <param name="id">Id do contato a ser deletado</param>
+        /// <returns>Status Code 204</returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
