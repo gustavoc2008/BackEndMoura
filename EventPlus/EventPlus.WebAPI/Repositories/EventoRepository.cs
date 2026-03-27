@@ -7,7 +7,7 @@ namespace EventPlus.WebAPI.Repositories;
 
 public class EventoRepository : IEventoRepository
 {
-    public readonly EventContext _context;
+    private readonly EventContext _context;
 
     public EventoRepository(EventContext context)
     {
